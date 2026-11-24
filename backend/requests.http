@@ -1,0 +1,43 @@
+@baseUrl = http://localhost:3000
+
+### 1. GET semua mahasiswa
+GET {{baseUrl}}/mahasiswa
+
+### 2. GET satu mahasiswa
+GET {{baseUrl}}/mahasiswa/1
+
+### 3. POST tambah presensi
+POST {{baseUrl}}/mahasiswa
+Content-Type: application/json
+
+{
+  "nama": "Fajar Nugroho",
+  "nim": "2211010156",
+  "kelas": "TI-3A",
+  "status": "Hadir",
+  "keterangan": "Datang tepat waktu"
+}
+
+### 4. PATCH ubah status
+PATCH {{baseUrl}}/mahasiswa/6
+Content-Type: application/json
+
+{ "status": "Izin", "keterangan": "Mengurus administrasi" }
+
+### 5. DELETE hapus
+DELETE {{baseUrl}}/mahasiswa/6
+
+### ERROR 404 - id tidak ada
+GET {{baseUrl}}/mahasiswa/999
+
+### ERROR 409 - NIM duplikat di tanggal yang sama
+POST {{baseUrl}}/mahasiswa
+Content-Type: application/json
+
+{ "nama": "Aisyah Duplikat", "nim": "2211010101", "kelas": "TI-3A", "status": "Hadir" }
+
+### ERROR 400 - validasi gagal
+POST {{baseUrl}}/mahasiswa
+Content-Type: application/json
+
+{ "nama": "Al", "nim": "abc", "kelas": "", "status": "Bolos", "tanggal": "kemarin" }
