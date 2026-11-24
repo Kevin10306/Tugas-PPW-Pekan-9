@@ -1,8 +1,9 @@
-# Presensi Mahasiswa (Fullstack)
+# Presensi Mahasiswa
 
-Presensi Mahasiswa adalah platform daring yang digunakan untuk merekam kehadiran siswa dalam mata kuliah Pemrograman Web. Pengguna memiliki kemampuan untuk menambahkan informasi kehadiran, mengubah status kehadiran (Hadir, Izin, Sakit, Alpa), menghapus informasi, serta melihat ringkasan jumlah berdasarkan status secara real-time.
+## Deksripsi
+Presensi Mahasiswa adalah platform daring yang digunakan untuk merekam kehadiran siswa dalam mata kuliah Pemrograman Web. Pengguna memiliki kemampuan untuk menambahkan informasi kehadiran, mengubah status kehadiran (Hadir, Izin, Sakit, Alpa), menghapus informasi, serta melihat ringkasan jumlah berdasarkan status secara real-time
 
-Bagian depan dibangun menggunakan React dan Vite. Bagian belakang dikembangkan dengan NestJS mengikuti pola MVC (Controller, Service, Entity/DTO), melakukan validasi data dengan class-validator, serta menangani kesalahan melalui NotFoundException dan ConflictException. Data disimpan sementara di memori server (akan hilang saat server restart).
+Bagian depan dibangun menggunakan React dan Vite. Bagian belakang dikembangkan dengan NestJS mengikuti pola MVC (Controller, Service, Entity/DTO), melakukan validasi data dengan class-validator, serta menangani kesalahan melalui NotFoundException dan ConflictException. Data disimpan sementara di memori server (akan hilang saat server restart)
 
 ## Struktur
 ```
@@ -21,4 +22,4 @@ docs/       screenshot pengujian
 | DELETE | /mahasiswa/:id | hapus |
 
 ## Screenshot
-Simpan di [Screenshots](/docs/screenshots)
+Screenshots tersimpan di [Screenshots](/docs/screenshots)
